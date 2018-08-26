@@ -22,7 +22,8 @@ Authenticate/login user. Generates a token which is to be used for accessing and
 
 
 **Parameters**
-| Parameter | Description | Parameter type
+
+| Parameter | Description | Parameter type |
 | --- | --- | --- |
 | email | unique value for each user | body |
 | password | user password | body |
@@ -47,7 +48,8 @@ curl --request POST \
 | user/create/ | POST | Create user |
 
 **Parameters**
-| Parameter | Description | Parameter type
+
+| Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
 | email | unique value for each user | body |
@@ -79,7 +81,8 @@ http://localhost:8000/user/<id>
 
 
 **Parameters**
-| Parameter | Description | Parameter type
+
+| Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
 | email | unique value for each user | body |
@@ -107,7 +110,9 @@ http://localhost:8000/user/bucket/<bucket_id>
 |--- | --- | --- |
 | user/bucket/<bucket_id> | GET | List of all users in a bucket |
 
-| Parameter | Description | Parameter type
+**Parameter**
+
+| Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
 | bucket_id | bucket number | header |
@@ -128,7 +133,8 @@ http://localhost:8000/user/bucket/swap/<id>
 | user/bucket/swap/<id> | PUT | Change user's bucket |
 
 **Parameters**
-| Parameter | Description | Parameter type
+
+| Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
 | email | unique value for each user | body |
@@ -156,7 +162,8 @@ http://localhost:8000/user/<id>
 | user/<id> | GET | Fetch details of a user |
 
 **Parameters**
-| Parameter | Description | Parameter type
+
+| Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
 | id | user is | header |
@@ -177,7 +184,8 @@ http://localhost:8000/user/<id>
 | user/<id> | DELETE | Deletes that particular user |
 
 **Parameters**
-| Parameter | Description | Parameter type
+
+| Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
 | id | user is | header |
@@ -193,11 +201,6 @@ curl --request DELETE \
     "bucket":"5"
 }'
 ```
-
-
-
-
-
 
 
 
