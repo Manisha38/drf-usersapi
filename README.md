@@ -4,7 +4,7 @@ A Json based Restful API service for managing user information. Prefixed drf sin
 API helps you create, edit, delete users and swap user between bucket.
 
 ### Installation
-To run it locally you must have the required paackages. Install with:
+To run it locally you must have the required packages. Install with:
 ```pip install -r requirements.txt```
 
 ## API Documentation
