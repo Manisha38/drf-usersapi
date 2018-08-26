@@ -41,7 +41,8 @@ curl --request POST \
 
 ### Create User
 **URL**
-```http://localhost:8000/user/create/```
+
+http://localhost:8000/user/create/
 
 | Endpoint | Method | Description |
 |--- | --- | --- |
@@ -72,7 +73,8 @@ curl --request POST \
 ```
 
 ### Edit user information
-** URL **
+**URL**
+
 http://localhost:8000/user/<id>
 
 | Endpoint | Method | Description |
@@ -103,7 +105,8 @@ curl --request PUT \
 ```
 
 ### List bucket
-** URL **
+**URL**
+
 http://localhost:8000/user/bucket/<bucket_id>
 
 | Endpoint | Method | Description |
@@ -126,6 +129,7 @@ curl --request GET \
   
 ### Swap user's bucket
 **URL**
+
 http://localhost:8000/user/bucket/swap/<id>
 
 | Endpoint | Method | Description |
@@ -154,7 +158,8 @@ curl --request PUT \
 ```
 
 ### Fetch user detail
-*** URL ***
+**URL**
+
 http://localhost:8000/user/<id>
 
 | Endpoint | Method | Description |
@@ -176,7 +181,8 @@ curl --request GET \
 ```
 
 ### Delete user
-*** URL ***
+**URL**
+
 http://localhost:8000/user/<id>
 
 | Endpoint | Method | Description |
