@@ -41,7 +41,7 @@ def authenticate_user(request):
 
 
 class UserList(APIView):
-	permission_class = [AllowAny]
+	permission_class = [IsAuthenticated]
 
 	def get(self, request, pk, format=None):
 		users = User.objects.filter(bucket=pk)
@@ -58,7 +58,7 @@ class UserList(APIView):
 
 
 class UserCreate(APIView):
-	permission_class = [AllowAny]
+	permission_class = [IsAuthenticated]
 
 	def post(self,request,format=None):
 		serializer = UserSerializer(data=request.data)
@@ -79,6 +79,7 @@ class UserCreate(APIView):
 
 
 class UserDetail(APIView):
+	permission_classes = [IsAuthenticated]
 	def get_user_object(self, pk):
 		try:
 			return User.objects.get(pk=pk)	
