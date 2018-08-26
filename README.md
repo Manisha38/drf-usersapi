@@ -75,11 +75,11 @@ curl --request POST \
 ### Edit user information
 **URL**
 
-http://localhost:8000/user/<id>
+http://localhost:8000/user/<user_id>
 
 | Endpoint | Method | Description |
 |--- | --- | --- |
-| user/<id> | PUT | Update user detail |
+| user/<user_id> | PUT | Update user detail |
 
 
 **Parameters**
@@ -130,7 +130,7 @@ curl --request GET \
 ### Swap user's bucket
 **URL**
 
-http://localhost:8000/user/bucket/swap/<id>
+http://localhost:8000/user/bucket/swap/<user_id>
 
 | Endpoint | Method | Description |
 |--- | --- | --- |
@@ -160,18 +160,18 @@ curl --request PUT \
 ### Fetch user detail
 **URL**
 
-http://localhost:8000/user/<id>
+http://localhost:8000/user/<user_id>
 
 | Endpoint | Method | Description |
 |--- | --- | --- |
-| user/<id> | GET | Fetch details of a user |
+| user/<user_id> | GET | Fetch details of a user |
 
 **Parameters**
 
 | Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
-| id | user is | header |
+| id | user id | header |
 
 **Example**
 ```
@@ -183,18 +183,18 @@ curl --request GET \
 ### Delete user
 **URL**
 
-http://localhost:8000/user/<id>
+http://localhost:8000/user/<user_id>
 
 | Endpoint | Method | Description |
 |--- | --- | --- |
-| user/<id> | DELETE | Deletes that particular user |
+| user/<user_id> | DELETE | Deletes that particular user |
 
 **Parameters**
 
 | Parameter | Description | Parameter type |
 | --- | --- | --- |
 | token | authentication token | header |
-| id | user is | header |
+| id | user id | header |
 
 **Example**
 ```
