@@ -82,6 +82,7 @@ http://localhost:8000/user/create/
 curl --request POST \
   --url http://localhost:8000/user/create/ \
   --header 'Content-Type: application/json' \
+  --header 'Authorization: JWT <jwt token>' \
   --data '{
     "email": "exampe@abc.com",
     "first_name": "example",
@@ -122,6 +123,7 @@ http://localhost:8000/user/<user_id>
 curl --request PUT \
   --url http://localhost:8000/user/27/ \
   --header 'Content-Type: application/json' \
+  --header 'Authorization: JWT <jwt token>'
   --data '{
     "email": "exampe@abc.com",
     "first_name": "example1",
@@ -159,6 +161,7 @@ http://localhost:8000/user/bucket/<bucket_id>
 curl --request GET \
   --url http://localhost:8000/user/bucket/2 \
   --header 'Content-Type: application/json'
+  --header 'Authorization: JWT <jwt token>'
 ```
 
 ### Swap user's bucket
@@ -194,6 +197,7 @@ http://localhost:8000/user/bucket/swap/<user_id>
 curl --request PUT \
   --url http://localhost:8000/user/bucket/swap/27 \
   --header 'Content-Type: application/json' \
+  --header 'Authorization: JWT <jwt token>' \
   --data '{
     "email": "exampe@abc.com",
     "password": "example123",
@@ -231,6 +235,7 @@ http://localhost:8000/user/<user_id>
 curl --request GET \
   --url http://localhost:8000/user/27 \
   --header 'Content-Type: application/json'
+  --header 'Authorization: JWT <jwt token>'
 ```
 
 ### Delete user
@@ -260,6 +265,7 @@ http://localhost:8000/user/<user_id>
 curl --request DELETE \
   --url http://localhost:8000/user/26 \
   --header 'Content-Type: application/json' \
+  --header 'Authorization: JWT <jwt token>' \
   --data '{
     "email": "exampe@abc.com",
     "password": "example123",
