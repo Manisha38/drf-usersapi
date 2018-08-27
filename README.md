@@ -28,6 +28,15 @@ Authenticate/login user. Generates a token which is to be used for accessing and
 | email | unique value for each user | body |
 | password | user password | body |
 
+**Response Messages**
+
+-Response Code : 400 
+  Error message : provide email and password
+  Reason : Invalid or not email or password in the request
+-Response Code : 200
+  Response model : json containing auth token
+
+
 **Example**
 ```
 curl --request POST \
@@ -58,6 +67,15 @@ http://localhost:8000/user/create/
 | first_name | user's first name | body |
 | last_name | user's last name | body |
 | bucket | bucket number | body |
+
+**Response Messages**
+
+-Response code: 400 
+  Error message: Select another bucket
+  Reason: Bucket contains 20 users and cannot include another one
+  
+-Response code : 200
+  Response model : Json represntation of user
 
 **Example**
 ```
@@ -91,6 +109,14 @@ http://localhost:8000/user/<user_id>
 | password | user password | body |
 | first_name/bucket/last_name | user attribute | body |
 
+**Response Messages**
+
+-Response code : 400
+  Error message : Email/ password field is required
+ 
+-Response code : 200
+  Response model : Json represntation of user
+
 **Example** 
 ```
 curl --request PUT \
@@ -120,13 +146,21 @@ http://localhost:8000/user/bucket/<bucket_id>
 | token | authentication token | header |
 | bucket_id | bucket number | header |
 
+**Response Messages**
+
+-Response code : 400
+  Error message : Email/ password field is required
+ 
+-Response code : 200
+  Response model : List of users
+
 ** Example**
 ```
 curl --request GET \
   --url http://localhost:8000/user/bucket/2 \
   --header 'Content-Type: application/json'
 ```
-  
+
 ### Swap user's bucket
 **URL**
 
@@ -144,6 +178,16 @@ http://localhost:8000/user/bucket/swap/<user_id>
 | email | unique value for each user | body |
 | password | user password | body |
 | bucket_id | bucket number | body |
+
+**Response Message**
+
+-Response code : 400
+  Error message: Select another bucket
+  Reason: Bucket contains 20 users and cannot include another one
+ 
+-Response code : 200
+  Response model : Json represntation of user
+
 
 **Example**
 ```
@@ -173,6 +217,15 @@ http://localhost:8000/user/<user_id>
 | token | authentication token | header |
 | id | user id | header |
 
+**Response Message**
+
+-Response code : 404
+  Error message: Object not found
+  Reason: User does not exist 
+ 
+-Response code : 200
+  Response model : Json represntation of user
+
 **Example**
 ```
 curl --request GET \
@@ -195,6 +248,12 @@ http://localhost:8000/user/<user_id>
 | --- | --- | --- |
 | token | authentication token | header |
 | id | user id | header |
+
+**Response Message**
+ 
+-Response code : 201
+  Response model : Text message
+
 
 **Example**
 ```
